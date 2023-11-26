@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Activity Tracker</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .tracker-container {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    h1 {
+      color: #f0f0f0;
+    }
+
+    .activity-log {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tracker-container">
+    <h1>User Activity Tracker</h1>
+    <p>User ID: <%= userId %></p>
+    <div class="activity-log" id="activity-log">
+      <!-- Activity log will be dynamically updated here -->
+    </div>
+
+    <script>
+      // Simulate keyboard and mouse activity (for demonstration purposes)
+      setInterval(() => {
+        const eventType = Math.random() < 0.5 ? 'Keyboard' : 'Mouse';
+        const details = eventType === 'Keyboard' ? 'Typed some keys' : 'Moved the mouse';
+
+        // Send activity data to the server
+        fetch('/log-activity', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId: '<%= userId %>', eventType, details }),
+        });
+      }, 5000); // Log activity every 5 seconds (adjust as needed)
+    </script>
+  </div>
+</body>
+
+</html>

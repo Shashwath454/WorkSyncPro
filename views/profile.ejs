@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= user.name %> - Employee Profile</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .profile-container {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      color: #f0f0f0;
+      text-align: center;
+    }
+
+    .user-info {
+      margin-top: 20px;
+    }
+
+    .field {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .field span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="profile-container">
+    <h1><%= user.name %>'s Profile</h1>
+    <div class="user-info">
+      <div class="field">
+        <span>Job Title:</span>
+        <span><%= user.jobTitle %></span>
+      </div>
+      <div class="field">
+        <span>Department:</span>
+        <span><%= user.department %></span>
+      </div>
+      <!-- Add more fields as needed -->
+    </div>
+  </div>
+</body>
+
+</html>
