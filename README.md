@@ -1,5 +1,5 @@
-CodeSyncPro
-Welcome to the CodeSyncPro GitHub repository! This repository houses three distinct projects aimed at enhancing various aspects of Human Resources management:
+WorkSyncPro
+Welcome to the WorkSyncPro GitHub repository! This repository houses three distinct projects aimed at enhancing various aspects of Human Resources management:
 
 1. Onboarding Excellence
 Efficiently onboard new employees by implementing a comprehensive program that seamlessly combines administrative tasks with cultural assimilation. Utilize cutting-edge onboarding software to streamline paperwork, automate processes, and ensure a consistent onboarding experience. Incorporate mentorship, training, and social integration for an engaging and effective onboarding process.
